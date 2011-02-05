@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:v="urn:schemas-microsoft-com:vml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   
+    <title>Simple Django Blog</title>
+
+    <!-- Load our color and font preferences -->
+    <link rel=StyleSheet href="/scripts/style.css" TYPE="text/css">
+  </head>
+
+  <body>
+    <h1> Comments on "{{blog.title}}" </h1>
+    <hr>
+    <div class="commentlist">
+
+      {% if comments %}
+        <ul>
+        {% for comment in comments %}
+           <li> 
+            [{{comment.ratingText}}] -- 
+            {{ comment.content }}
+            
+            </li>
+        
+        {% endfor %}
+        </ul>
+      {% else %}
+        <p>No comments on this entry.</p>
+      {% endif %}
+    </div>
+    <hr/>
+    <div class="footerlink">
+
+      Add a <a href="add">comment</a> <br/>
+      Return to <a href="..">{{blog.title}} </a> <br/>
+      Return to <a href="/simpleblog">Top</a> <br/>
+
+    </div>
+  </body>
+</html>
+    

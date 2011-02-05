@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:v="urn:schemas-microsoft-com:vml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   
+    <title>Simple Django Blog</title>
+
+    <!-- Load our color and font preferences -->
+    <link rel=StyleSheet href="/scripts/style.css" TYPE="text/css">
+  </head>
+
+  <body>
+
+    <h1>Post new blog entry</h1>
+
+    <form action="/simpleblog/blog/postEntry/" method="post">
+      Title:
+      <input type="text" name="title"> <br/>
+      Author's email address:
+      <input type="text" name="reply_to"> <br/>
+      <textarea rows="10" cols="80" name="content"></textarea>
+      <p/>
+      <input type="submit" value="Post" />
+    </form>
+  </body>
+</html>

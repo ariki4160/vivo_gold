@@ -1,0 +1,54 @@
+      h1, h2 {
+        font-family: Arial,sans-serif;
+        margin: 0px;
+        padding: 0px;
+      }
+    
+      h1{     
+        font-family: Verdana,Arial,sans-serif;
+        font-size: 120%;
+        color: #334d55;
+      }
+    
+      h2{     
+        font-size: 100%;
+        color: #006666;
+      }
+    
+      .bloglist {
+        font-family: Verdana,Arial,sans-serif;
+        background-color: #808565;
+        border: thin solid #545454;
+        padding: 5px;
+        width: 90%;
+      }
+    
+      .commentlist {
+        font-family: Verdana,Arial,sans-serif;
+        background-color: #808565;
+        border: thin solid #545454;
+        padding: 5px;
+        width: 90%;
+      }
+
+      .footerlink {
+        font-family: Verdana,Arial,sans-serif;
+        font-size: 100%;
+        background-color: #A0A0A0;
+        border: thin solid #545454;
+        padding: 5px;
+        width: 90%;
+      }
+    
+      .blogtext {
+        font-family: Verdana,Arial,sans-serif;
+        font-size: 100%;
+        background-color: #FFFFFF;
+        border: thin solid #545454;
+        padding: 5px;
+        width: 90%;
+      }
+    
+      body {  
+        background-color: #A4A4DB;
+      }

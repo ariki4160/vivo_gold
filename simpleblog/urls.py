@@ -7,12 +7,24 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^simpleblog/', include('simpleblog.foo.urls')),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    (r'^simpleblog/$', 'simpleblog.dblog.views.index'),
+    (r'^simpleblog/writeBlog/$', 'simpleblog.dblog.views.writeBlog'),
+    (r'^simpleblog/blog/postEntry/$', 'simpleblog.dblog.views.postEntry'),
+    (r'^simpleblog/blog/(?P<blog_id>\d+)/$', 'simpleblog.dblog.views.readBlog'),
+    (r'^simpleblog/blog/(?P<blog_id>\d+)/comment/$', 'simpleblog.dblog.views.comment'),
+    (r'^simpleblog/blog/(?P<blog_id>\d+)/comment/add/$', 
+                             'simpleblog.dblog.views.addComment'),
+    (r'^simpleblog/blog/(?P<blog_id>\d+)/postComment/$', 
+                             'simpleblog.dblog.views.postComment'),
+    (r'^scripts/(?P<path>.*)$', 'django.views.static.serve', 
+                                 {'document_root': './scripts'}),
+    (r'^admin/', include('django.contrib.admin.urls')),
 
     # Uncomment the next line to enable the admin:
-    (r'^admin/', include(admin.site.urls)),
+    # (r'^admin/', include(admin.site.urls)),
+
+
+
+
 )

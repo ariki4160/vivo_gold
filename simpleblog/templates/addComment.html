@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:v="urn:schemas-microsoft-com:vml">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   
+    <title>Simple Django Blog</title>
+
+    <!-- Load our color and font preferences -->
+    <link rel=StyleSheet href="/scripts/style.css" TYPE="text/css">
+  </head>
+
+  <body>
+
+    <h1>Comment on {{ blog.title }}</h1>
+
+    <form action="/simpleblog/blog/{{ blog.id }}/postComment/" 
+          method="post">
+        <textarea rows="10" cols="30" name="content"></textarea>
+        <p/>
+        How do you rate this entry: 
+        <select name="rating">
+          {% for r in blog.RATING_CHOICES %}
+            <!-- Use the template system to treat '.' as '[]' 
+             r[0] is the rating number, r[1] is the rating text -->
+            <option value="{{r.0}}">{{r.1}}</option>
+          {% endfor %}
+        </select>
+        <p/>
+        <input type="submit" value="Post" />
+    </form>
+  </body>
+</html>
