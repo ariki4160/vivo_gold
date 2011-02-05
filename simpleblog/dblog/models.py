@@ -77,5 +77,11 @@ class Comment(models.Model):
 
 from django.contrib import admin
 
-admin.site.register(Blog)
+class BlogAdmin(admin.ModelAdmin):
+  fieldsets = [
+    (None,{'fields': ['title','post_date','reply_to']}),
+    ('Contents', {'fields': ['content']}),
+  ]
+
+admin.site.register(Blog, BlogAdmin)
 admin.site.register(Comment)
