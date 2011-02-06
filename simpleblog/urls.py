@@ -18,7 +18,7 @@ urlpatterns = patterns('',
     (r'^simpleblog/blog/(?P<blog_id>\d+)/postComment/$', 
                              'simpleblog.dblog.views.postComment'),
     (r'^scripts/(?P<path>.*)$', 'django.views.static.serve', 
-                                 {'document_root': './scripts'}),
+                                 {'document_root': '/home/ariki/public_html/django/templates/dblog/scripts'}),
     # (r'^admin/', include('django.contrib.admin.urls')),
 
     # Uncomment the next line to enable the admin:
