@@ -33,6 +33,7 @@ def comment(request, blog_id):
                                'blog': blog}
                               )
 
+
 def addComment(request, blog_id):
     """Generate the context for the form in which new comments
        are entered"""
@@ -62,3 +63,6 @@ def postComment(request, blog_id):
                                       rating=request.POST['rating'])
     comment.save()
     return HttpResponseRedirect('/simpleblog/blog/%s/comment' % blog.id)
+
+"""test comments
+"""
