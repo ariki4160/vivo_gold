@@ -64,5 +64,6 @@ def postComment(request, blog_id):
     comment.save()
     return HttpResponseRedirect('/simpleblog/blog/%s/comment' % blog.id)
 
-"""test comments
+"""
+test comments
 """
