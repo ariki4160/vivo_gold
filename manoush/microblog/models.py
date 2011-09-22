@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 """
 モデル定義を行うファイルです。
@@ -17,3 +18,8 @@ class Note(models.Model):
     #ただし、Pythonのソースコードファイルにアスキー以外の文字を記述する場合、ファイルの最初にcodingの指定を行わなければなりません。また、指定通りの文字コードでファイルを保存してください。
     text = models.TextField()
     writed_at = models.DateTimeField()
+=======
+from django.db import models
+
+# Create your models here.
+>>>>>>> 9c24b07f0bd1e35ac34f9a7c9fca94cb194406cb
