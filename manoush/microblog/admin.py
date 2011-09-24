@@ -13,7 +13,7 @@ class NoteOptions(admin.ModelAdmin):
     設定の詳細は日本語ドキュメントを参照してください。 http://djangoproject.jp/doc/ja/1.0/ref/contrib/admin.html#ref-contrib-admin
     """
     #モデル毎のデータ一覧で表示する項目を指定しています
-    #list_display = ('author', 'short_text',)
+    list_display = ('author', 'short_text',)
     pass
 
 #自動管理インターフェースに、モデルと設定のクラスを登録します。
