@@ -1,0 +1,31 @@
+{% extends 'microblog/base.html' %}
+
+{% block content %}
+            {% if user.is_authenticated %}
+            <div id="note_form">
+                <form action="{% url post_note %}" method="post">
+                  {% csrf_token %}
+                  <table>
+                    {{ form }}
+                  </table>
+                    <p><input type="submit" value="つぶやく" /></p>
+                </form>
+            </div>
+            {% endif %}
+    {% for obj in object_list %}
+            <div class="entry {% cycle odd,even %}">
+                <div class="message">
+                    <div class="body">{{ obj.text|urlize|linebreaks }}</div>
+                    <div class="meta"><a href="#">{{ obj.author.username }}</a> at <a href="#">{{ obj.writed_at|date:"Y-m-d h:i:s" }}</a>({{ obj.writed_at|timesince }} 前)</div>
+                </div>
+            </div>
+    {% endfor %}
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                    <a href="{% url microblog_home %}?page={{ page_obj.previous_page_number }}">前へ</a>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <a href="{% url microblog_home %}?page={{ page_obj.next_page_number }}">次へ</a>
+                {% endif %}
+            </div>
+{% endblock content %}

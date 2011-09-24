@@ -1,0 +1,74 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    color:#222;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a {
+    text-decoration:none;
+}
+a:focus, a:hover {
+    text-decoration: underline;
+    color:#000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight:normal;
+    color:#111;
+    text-shadow: 0px -1px 1px #1c0b03;
+    font-family: DIN-Bold, 'Helvetica Neue', Arial, sans-serif;
+}
+#menu h1 {font-size: 1em; line-height: 40px; margin-bottom: 0; color: #633709; display: block;}
+#menu h1 a {
+    color: #633709;
+    -webkit-transition-property: color,;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease-in;
+  }
+#menu h1 a:hover { color: #ff8800; }
+
+#menu {
+    background-color: #999999;
+    padding:3px;
+    margin-bottom: 14px;
+}
+    #menu a {
+        padding-left:1em;
+    }
+#content {
+    float: left;
+    width: auto;
+    padding: 1em;
+}
+#content h2 {
+    text-align:center;
+}
+#content .entry {
+    margin-left: 4em;
+    margin-top: 1em;
+    border-bottom: groove 1px #999999;
+}
+#content .meta {
+    font-size: 70%;
+    padding: .5em;
+}
+.pagination {
+    font-size: 80%;
+    text-align: center;
+    padding: 1em;
+}
+
+#sub_content {
+    border: solid 1xp rgb(0,0,0);
+    float: right;
+    width: 120px;
+}
+
+
+#note_form {
+    
+}
+#note_form label {
+    visibility: hidden;
+}

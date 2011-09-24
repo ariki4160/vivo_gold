@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+{% load i18n %}
+<head>
+  <title>manoush</title>
+  <link href="{{ MEDIA_URL }}styles/basic.css" rel="stylesheet" type="text/css" media="screen" />
+  {% block head %}
+  {% endblock head %}
+  <script type="text/javascript">
+  {% block javascript %}
+  {% endblock javascript %}
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <div id="menu">
+      <h1 class="title"><a href="{% url microblog_home %}">manoush</a></h1>
+    </div>
+    <div id="main">
+        <div id="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <div id="sub_content">
+            {% block sub_content %}
+            sub_content
+            {% endblock sub_content %}
+        </div>
+    </div>
+  </div>
+</body>
+</html>
